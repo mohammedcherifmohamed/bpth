@@ -145,6 +145,24 @@
     background: var(--navy);
   }
 
+  /* ---------- Card gold link ---------- */
+  .card-link{
+    color: var(--copper);
+    font-weight: 600;
+    letter-spacing: .01em;
+    transition: gap .25s ease, color .25s ease;
+  }
+  .card-link i{
+    transition: transform .25s cubic-bezier(.2,.7,.2,1);
+  }
+  .card-link:hover{
+    color: var(--copper-light);
+    gap: 12px;
+  }
+  .card-link:hover i{
+    transform: translateX(3px);
+  }
+
   /* ---------- Form ---------- */
   .field-input{
     background: #fff;
@@ -215,6 +233,7 @@
     <div class="hidden md:flex items-center gap-9 mono text-[13px] uppercase tracking-wider">
       <a href="#services" class="nav-link">Services</a>
       <a href="#devis" class="nav-link">Consultation</a>
+      <a href="#pieces" class="nav-link">Demander une pièce</a>
       <a href="#contact" class="nav-link">Contact</a>
       <a href="#plan" class="nav-link">Plan</a>
     </div>
@@ -231,6 +250,7 @@
   <div id="mobileMenu" class="hidden md:hidden px-6 pb-6 flex flex-col gap-4 mono text-[13px] uppercase tracking-wider" style="border-top: 1px solid var(--line-light);">
     <a href="#services" class="nav-link pt-4">Services</a>
     <a href="#devis" class="nav-link">Consultation</a>
+    <a href="#pieces" class="nav-link">Demander une pièce</a>
     <a href="#contact" class="nav-link">Contact</a>
     <a href="#plan" class="nav-link">Plan</a>
     <a href="#devis" class="btn-primary inline-flex justify-center items-center gap-2 px-5 py-3 rounded-[10px] font-semibold mt-1">Demander un devis</a>
@@ -355,7 +375,7 @@
         <p class="text-[15px] leading-relaxed mb-8" style="color: rgba(26,36,51,0.65);">
           Intervention sur site ou en atelier. Nos techniciens certifiés identifient la panne et interviennent avec des pièces d'origine, pour une remise en service rapide et durable.
         </p>
-        <div class="mt-auto grid grid-cols-2 gap-4 pt-6" style="border-top: 1px solid var(--line);">
+        <div class="mt-auto grid grid-cols-2 gap-4 pt-6 mb-7" style="border-top: 1px solid var(--line);">
           <div>
             <div class="mono text-[18px] font-semibold" style="color: var(--navy);">&lt;4h</div>
             <div class="text-[12px]" style="color: rgba(26,36,51,0.5);">Sur les zones urbaines</div>
@@ -365,6 +385,9 @@
             <div class="text-[12px]" style="color: rgba(26,36,51,0.5);">Astreinte disponible</div>
           </div>
         </div>
+        <a href="#devis" class="card-link inline-flex items-center gap-2 text-[14px]">
+          Réserver maintenant <i class="fa-solid fa-arrow-right text-[12px]"></i>
+        </a>
       </div>
 
       <div class="reveal reveal-delay-1 service-card rounded-[20px] p-8">
@@ -372,19 +395,25 @@
           <i class="fa-solid fa-calendar-check text-[17px]" style="color: var(--copper-light);"></i>
         </div>
         <h3 class="text-[19px] font-bold mb-3" style="color: var(--navy);">Maintenance Contractuelle</h3>
-        <p class="text-[14px] leading-relaxed" style="color: rgba(26,36,51,0.65);">
+        <p class="text-[14px] leading-relaxed mb-6" style="color: rgba(26,36,51,0.65);">
           Contrats d'entretien sur mesure et visites régulières pour anticiper les pannes et prolonger la durée de vie de vos installations.
         </p>
+        <a href="#devis" class="card-link inline-flex items-center gap-2 text-[14px]">
+          Réserver maintenant <i class="fa-solid fa-arrow-right text-[12px]"></i>
+        </a>
       </div>
 
-      <div class="reveal reveal-delay-2 service-card rounded-[20px] p-8">
+      <div id="pieces" class="reveal reveal-delay-2 service-card rounded-[20px] p-8 scroll-mt-[90px]">
         <div class="service-icon w-12 h-12 rounded-[12px] flex items-center justify-center mb-6" style="background: var(--navy);">
           <i class="fa-solid fa-gears text-[17px]" style="color: var(--copper-light);"></i>
         </div>
         <h3 class="text-[19px] font-bold mb-3" style="color: var(--navy);">Pièces de Rechange</h3>
-        <p class="text-[14px] leading-relaxed" style="color: rgba(26,36,51,0.65);">
+        <p class="text-[14px] leading-relaxed mb-6" style="color: rgba(26,36,51,0.65);">
           Commande express sur stock certifié : filtres, alternateurs, cartes de régulation et consommables pour toutes marques.
         </p>
+        <a href="#devis" class="card-link inline-flex items-center gap-2 text-[14px]">
+          Réserver maintenant <i class="fa-solid fa-arrow-right text-[12px]"></i>
+        </a>
       </div>
 
       <div class="reveal reveal-delay-3 service-card lg:col-span-2 rounded-[20px] p-8 flex flex-col sm:flex-row sm:items-center gap-6">
@@ -393,9 +422,12 @@
         </div>
         <div>
           <h3 class="text-[19px] font-bold mb-2" style="color: var(--navy);">Location Flexible</h3>
-          <p class="text-[14px] leading-relaxed" style="color: rgba(26,36,51,0.65);">
+          <p class="text-[14px] leading-relaxed mb-5" style="color: rgba(26,36,51,0.65);">
             Groupes de 5 à 500 kVA, courte ou longue durée. Livraison, mise en service et assistance technique incluses.
           </p>
+          <a href="#devis" class="card-link inline-flex items-center gap-2 text-[14px]">
+            Réserver maintenant <i class="fa-solid fa-arrow-right text-[12px]"></i>
+          </a>
         </div>
       </div>
 
